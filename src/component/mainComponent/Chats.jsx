@@ -60,11 +60,14 @@ const messages = [
 
 const useStyles = makeStyles((theme) => ({
   list: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(1),
   },
   messageStyle: {
-    borderBottom: '1px solid #D3D3D3'
-  }
+    borderBottom: '1px solid #D3D3D3',
+    "& p":{
+        marginBottom: '10px'
+    }
+  },
 }));
 
 export default function Chats() {
