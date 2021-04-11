@@ -32,8 +32,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Header() {
+export default function Header(props) {
   const classes = useStyles();
+  const {setValue, value} = props;
 
   return (
     <div className={classes.root}>
@@ -51,7 +52,7 @@ export default function Header() {
             </IconButton>
           </div>
         </Toolbar>
-        <HeaderTabs/>
+        <HeaderTabs setValue={setValue} value={value}/>
       </AppBar>
     </div>
   );

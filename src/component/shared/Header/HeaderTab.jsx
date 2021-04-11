@@ -13,21 +13,17 @@ const useStyles = makeStyles((theme) => ({
   },
   tabList:{
     '& button':{
-        marginRight: '5px'
+        marginRight: '25px'
     }
   }
 }));
 
-export default function HeaderTabs() {
+export default function HeaderTabs(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const {setValue, value} = props;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
-
-  const handleChangeIndex = (index) => {
-    setValue(index);
   };
 
   return (
